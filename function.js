@@ -106,6 +106,9 @@
 
 // console.log(Math.random()*100)
 
+this一定是在function运行时进行赋值
+
+apply()，第二个参数既传入实际参数，一定要用[].
 
 
 

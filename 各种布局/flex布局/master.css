@@ -1,0 +1,23 @@
+footer{
+	width: 100%;
+	display: -webkit-box;
+	-webkit-box-pack:justify;
+}
+
+
+footer a{
+	display: block;
+	padding: 15px 0;
+	text-decoration: none;
+	color: #fff;
+	text-align: center;
+	width: 0;
+	-webkit-box-flex:1;
+}
+
+.digg{
+	background: #B01;
+}
+.bury{
+	background: #b02;
+}
