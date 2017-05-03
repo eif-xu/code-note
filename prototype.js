@@ -76,4 +76,43 @@
 
 
 
+/*
+*
+*构造函数法改进于工厂模式
+*function Box(name,age){
+*	this.name=name;
+*	this.age=age;
+*	this.run=function(){return '名字'+this.name+'年龄'+this.age}
+*}
 
+*var box1= new Box('hgj',3);
+*var box2= new Box('qwe',32);
+
+*console.log(box1.run())
+*console.log(box2.run())
+*
+*/
+
+// function Box(){};
+// Box.prototype.name='xxx';
+// Box.prototype.age=12;
+
+// var box1=new Box;
+// console.log(box1.name);
+
+
+/*
+*
+ *动态原型模式
+*function Box(name,age){
+*	this.name=name;
+*	this.age=age;
+*
+*	if(typeof(this.run)!='function'){
+*		Box.prototype.run=function(){return this.name+this.age+'运行中'}
+*	}
+*}
+*var box=new Box('xxx',12);
+*console.log(box.run())
+*
+*/
