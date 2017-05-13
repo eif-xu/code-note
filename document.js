@@ -78,4 +78,10 @@ box.parentNode.removeChild(box)
 
 
 
+dom扩展
+进行滚动的设置
+document.getElementById('').scrollIntoView()
+scrollIntoView里面的值是布尔值，默认true，表示滚动使视图顶部与视窗重合
+false表示底部与视窗重合
+
 
