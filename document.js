@@ -79,9 +79,55 @@ box.parentNode.removeChild(box)
 
 
 dom扩展
+
 进行滚动的设置
 document.getElementById('').scrollIntoView()
 scrollIntoView里面的值是布尔值，默认true，表示滚动使视图顶部与视窗重合
 false表示底部与视窗重合
+
+
+访问元素样式---所有的元素的标签都有stype属性
+var box = document.getElementById('p')
+box.style.cssFloat.color='red';  //这是w3c的
+box.stype.styleFloat.color='red'  //IE的
+
+
+获取dom元素的大小
+1. 得到css的大小
+直接通过访问css的属性可以得到
+多因素的css的综合结果使用css的计算得到
+Var style = window.getComputedStyle?window.getComputedStyle(box.null)||box.currentStyle;
+style.width;
+style.height;
+
+
+2. 得到viewport的element的大小
+var box=document.getElementById('p');
+可视区域的大小
+box.clientWidth()
+box.clientHeight()
+
+滚动元素的大小
+box.scrollWidth()
+box.scrollHieght()
+
+返回滚动条的大小
+box.offsetWidth()
+box.offsetHieght()
+
+
+元素的位置我的理解就是获得Element然后在周围形成一个盒子
+
+var box=getElementById('box')
+box.getBoundingClientRect().top     元素上到   页面上的位置随着页面的移动而变化
+box.getBoundingClientRect().left    元素右到   页面的左边的距离
+box.getBoundingClientRect().bottom  元素下到   页面上边的距离
+box.getBoundingClientRect().right   元素左到   页面页面左边的距离
+
+
+
+
+
+
 
 
