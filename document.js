@@ -42,8 +42,8 @@ document.getElementById().nextSibling // 获得当前节点的后一个元素
 
 
 # 节点的操作
-
-特殊的节点 
+ 
+特殊的节点
 document.write() //触发window.open()进行页面的重绘
 
 创造节点
@@ -111,7 +111,7 @@ box.clientHeight()
 box.scrollWidth()
 box.scrollHieght()
 
-返回滚动条的大小
+返回元素实际的大小 （只可以获得padding的高度，是不可以获得margin的高度的）
 box.offsetWidth()
 box.offsetHieght()
 

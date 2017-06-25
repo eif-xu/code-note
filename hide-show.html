@@ -1,0 +1,52 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>test-show-js</title>
+ 	<meta charset="utf-8">
+ 	<style type="text/css">
+ 		.nav{height: 200px;width: 100%;}
+ 		.nav .item{display: flex;}
+ 		.nav .item li{margin-left: 100px;}
+ 	</style>
+ </head>
+ <body>
+ <figure class="box">
+ 	<nav class="nav">
+ 		<ul class="item">
+ 			<li>首页</li>
+ 			<li>fdsa</li>
+ 			<li>dfas</li>
+ 			<li>asdf</li>
+ 		</ul>
+ 	</nav>
+ </figure>
+ </body>
+ <script type="text/javascript">
+
+ 	var element = document.getElementsByTagName('li')[1];
+ 	var hide = function(){this.style.visibility='hidden'};
+ 	var event= {
+ 		add: function(element,type,handler){
+ 			if(element.addEventListener){element.addEventListener(type,handler,false)}
+ 				else if(element.attachEvent){element.attachEvent('on'+type,handler)}
+ 					else element['on'+type]=handler;
+ 		},
+ 		remove: function(element,type,handler){
+ 			if(element.removeEventListener){element.removeEventListener(element,type)}
+ 				else if(element.detachEvent){element.detachEvent('on'+type,handler)}
+ 					else {element['on'+type]=null}
+ 		}
+ 	}
+ 	event.add(element,'click',hide)
+
+
+
+
+
+
+ 	/*var element = document.getElementsByTagName('li')[1];
+ 	element.onmouseup=function(){element.style.display='none'};*/
+
+
+ </script>
+ </html>
